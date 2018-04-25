@@ -8,6 +8,9 @@
       <router-link to='/hello' tag='li'><a href="/hello">Hello</a></router-link>
       <router-link to='/form' tag='li'><a href="/form">Hello</a></router-link>-->
     </ul>
+    <ul>
+      <li v-for="(item,key) in data">{{item}}</li>
+    </ul>
     <router-view/>
 
 
@@ -16,16 +19,22 @@
 
 
 <script>
-export default {
-  name: 'App',
-  data(){
-    return{
-      msg:"welcome to Vue.js World"
+  export default {
+    name:'App',
+    data(){
+      return {
+        data:[]
+      }
+    },
+    mounted:function(){
+      this.$.axios.get('/api/data').then(res =>{
+        this.data = res.data;
+        console.log(res);
+      })
     }
   }
-}
 </script>
 
-<style>
-
+<style lang="scss">
+  @import './styles/index.scss'; // 全局自定义的css样式
 </style>

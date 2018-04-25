@@ -22,8 +22,8 @@
 </template>
 
 <script>
-  import {formatDate} from '../utils/date.js'
-  import hamburger  from '../assets/images/hamburger.png'
+  import {formatDate} from '../../utils/date.js'
+  import hamburger  from '../../assets/images/hamburger.png'
 
 
     export default {

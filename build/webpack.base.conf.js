@@ -28,6 +28,10 @@ module.exports = {
       $:"jquery",
       jQuery:"jquery",
       "windows.jQuery":"jquery"
+    }),
+    new webpack.DllReferencePlugin({
+      context: __dirname,
+      manifest: require('./vendor-manifest.json')
     })
   ],
   resolve: {
