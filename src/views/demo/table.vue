@@ -71,15 +71,17 @@
   </el-table>
     <br/>
     <div class="block">
-      <el-pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page="currentPage4"
-        :page-sizes="[100, 200, 300, 400]"
-        :page-size="100"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="400">
-      </el-pagination>
+      <table-pagination>
+        <el-pagination
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          :current-page="currentPage"
+          :page-sizes="[10, 50, 100, 200]"
+          :page-size="10"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="400">
+        </el-pagination>
+      </table-pagination>
     </div>
   </el-row>
 </template>
@@ -99,11 +101,7 @@
       handleCurrentChange (val) {
         console.log(`当前页: ${val}`)
       },
-      handleSelectionChange(val) {
-        this.multipleSelection = val
-      },
       onSubmit: function () {
-        console.log(this.multipleSelection)
         this.$message.error('错了哦，这是一条错误消息')
         this.$message({
           message: '恭喜你，这是一条成功消息',

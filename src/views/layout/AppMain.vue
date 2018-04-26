@@ -1,6 +1,6 @@
 <template>
   <section class="app-main">
-      <router-view>这是首页</router-view>
+      <router-view></router-view>
   </section>
 </template>
 

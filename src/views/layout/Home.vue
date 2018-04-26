@@ -22,28 +22,7 @@
         Navbar,
         ToggleSide,
         AppMain
-      },
-      methods: {
-          handleOpen(key, keyPath) {
-            console.log(key, keyPath);
-          },
-          handleClose(key, keyPath) {
-            console.log(key, keyPath);
-          },
-          goBack () {
-            window.history.length > 1
-              ? this.$router.go(-1)
-              : this.$router.push('/')
-          }
-      },
-      computed: {
-        username () {
-          // 我们很快就会看到 `params` 是什么
-          return this.$route.params.username
-        }
-      },
-      mounted(){
-      },
+      }
     }
 </script>
 

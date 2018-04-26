@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 import App from './App.vue'
 import index from './views/demo/index'
 import hello from './views/demo/hello'
-import home from './views/layout/home'
+import home from './views/layout/Home'
 import formValidator from './views/demo/formValidator'
 import list from './views/demo/list'
 import list1 from './views/demo/list1'
