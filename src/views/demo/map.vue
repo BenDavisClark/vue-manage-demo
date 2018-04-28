@@ -39,7 +39,8 @@ export default {
     } else {
       Promise.all([
         remoteLoad(
-          'http://webapi.amap.com/maps?v=1.4.4&key=7f7cef2b7c475e679344f813fe161775&plugin=AMap.MarkerClusterer'
+          'http://webapi.amap.com/maps?v=1.4.4&key=7f7cef2b7c475e679344f813fe161775&plugin=AMap.MarkerClusterer',
+          'http://cache.amap.com/lbs/static/addToolbar.js'
         )
       ]).then(() => {
         this.initMap()
@@ -59,7 +60,7 @@ export default {
         var tool = new AMap.ToolBar()
         that.map.addControl(tool)
       })
-      // this.getMarker()
+       //this.getMarker()
     },
     rerender: function () {
       this.$store.commit('SECHOOSEN', '')

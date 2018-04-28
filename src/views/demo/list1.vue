@@ -12,7 +12,6 @@
 
             <section class="Cleft clearfix">
 
-
               <span class="fl">{{newsDate.author_name}}</span>
 
             </section>
@@ -45,9 +44,8 @@
   </div>
 </template>
 
-
-
 <script>
+
   export default {
     name: "index",
 

@@ -21,6 +21,19 @@
             <el-option label="区域二" value="beijing"></el-option>
           </el-select>
         </el-form-item>
+        <el-form-item label="活动区域">
+        <div class="block">
+          <span class="demonstration">默认</span>
+            {{value6}}
+            <el-date-picker
+              v-model="value6"
+              type="daterange"
+              range-separator="至"
+              start-placeholder="开始日期"
+              end-placeholder="结束日期">
+            </el-date-picker>
+          </div>
+        </el-form-item>
         <el-form-item>
           <el-button type="primary" size="small" @click="onSubmit">查询</el-button>
         </el-form-item>
@@ -116,6 +129,7 @@
 
     data() {
       return {
+        value6: '',
         tableData: [{
           date: '2016-05-03',
           name: '王小虎',

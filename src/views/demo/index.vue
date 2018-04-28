@@ -1,7 +1,7 @@
 <template>
-    <div>
-      <h1>{{sContent}}</h1>
-    </div>
+  <div class="dashboard-container">
+    <h1>{{ sContent }}</h1>
+  </div>
 </template>
 
 <script>
@@ -14,6 +14,10 @@
     }
 </script>
 
-<style scoped>
-
+<style rel="stylesheet/scss" lang="scss" scoped>
+  .dashboard {
+    &-container {
+       margin: 50px;
+     }
+  }
 </style>
